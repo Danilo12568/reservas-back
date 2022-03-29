@@ -17,5 +17,6 @@ class Reserva extends Model
         'id_reserva',
         'id_evento',
         'id_comprador',
+        'nro_boletas',
     ];
 }

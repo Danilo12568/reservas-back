@@ -18,7 +18,6 @@ class Evento extends Model
         'descripcion',
         'lugar',
         'fecha',
-        'cantidad_boletas',
-        'boletas_disponibles',
+        'boletas',
     ];
 }

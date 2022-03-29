@@ -15,11 +15,10 @@ class EventosTable extends Migration
     {
         Schema::create('eventos', function (Blueprint $table) {
             $table->bigIncrements('id_evento');
-            $table->string('descripcion', 20)->required();
+            $table->string('descripcion', 255)->required();
             $table->string('lugar', 255)->required();
             $table->date('fecha', 255)->required();
-            $table->integer('cantidad_boletas')->required();
-            $table->integer('boletas_disponibles')->required();
+            $table->integer('boletas')->required();
         });
     }
 

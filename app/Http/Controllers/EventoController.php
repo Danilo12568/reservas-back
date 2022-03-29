@@ -14,20 +14,19 @@ class EventoController extends Controller
             'descripcion' => 'required',
             'lugar' => 'required',
             'fecha' => 'required',
-            'cantidad_boletas' => 'required',
+            'boletas' => 'required',
         ], [
             'descripcion.required' => '*Rellena este campo',
             'lugar.required' => '*Rellena este campo',
             'fecha.required' => '*Rellena este campo',
-            'cantidad_boletas.required' => '*Rellena este campo',
+            'boletas.required' => '*Rellena este campo',
         ]);
 
         $new_evento = new Evento();
         $new_evento->descripcion = $request->descripcion;
         $new_evento->lugar = $request->lugar;
         $new_evento->fecha = $request->fecha;
-        $new_evento->cantidad_boletas = $request->cantidad_boletas;
-        $new_evento->boletas_disponibles = $request->cantidad_boletas;
+        $new_evento->boletas = $request->boletas;
         $response = $new_evento->save();
 
         return response()->json(["response" => $response], 200 );

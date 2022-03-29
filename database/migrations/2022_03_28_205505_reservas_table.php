@@ -19,6 +19,7 @@ class ReservasTable extends Migration
             $table->foreign('id_evento')->references('id_evento')->on('eventos');
             $table->unsignedBigInteger('id_comprador');
             $table->foreign('id_comprador')->references('id_comprador')->on('compradores');
+            $table->integer('nro_boletas')->required();
         });
     }
 

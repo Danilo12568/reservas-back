@@ -55,4 +55,5 @@ Route::group([
     'prefix' => 'reserva',
 ], function ($router) {
     Route::post('/guardar-reserva', [ReservaController::class, 'guardarReserva']);
+    Route::get('/traer-reservas', [ReservaController::class, 'traerReservas']);
 });
